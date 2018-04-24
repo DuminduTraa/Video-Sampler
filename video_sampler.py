@@ -3,8 +3,8 @@ import cv2
 
 time_interval = 5
 
-cap = cv2.VideoCapture("test.mp4")
-fps = cap.get(cv2.CAP_PROP_FPS)
+cap = cv2.VideoCapture("/input/test.mp4")
+fps = int(round(cap.get(cv2.CAP_PROP_FPS)))
 #print(fps)
 count = 0
 
@@ -15,8 +15,8 @@ while(cap.isOpened()):
     if ret == True: 
 
         if count % (time_interval*fps) == 0 : 
-            print(count)
-            #cv2.imwrite("frame%d.jpg" % count, frame)
+            #print(count)
+            cv2.imwrite("frame%d.jpg" % count, frame)
 
         # Display the resulting frame
         cv2.imshow('frame',frame)

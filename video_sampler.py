@@ -3,11 +3,11 @@ import cv2
 
 time_interval = 5  # time interval between samples in seconds
 
-cap = cv2.VideoCapture('input/test.mp4')
+cap = cv2.VideoCapture('input/vid9.mp4')
 fps = int(round(cap.get(cv2.CAP_PROP_FPS)))
 #print(fps)
 count = 0
-cap_count = 1
+cap_count = 1383
 out_path = "/home/dumindu/Codes/Video-Sampler/output"
 
 while(cap.isOpened()):
